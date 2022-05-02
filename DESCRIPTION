@@ -1,0 +1,13 @@
+Package: ANOVA
+Title: Analysis Of Variance 
+Version: 0.0.0.9000
+Authors@R: person('Blessing', 'Oladoja', email = 'blessingoladoja22@gmail.com', role = c('cre', 'aut'))
+Description: An application for carrying out analysis of variance.
+License: MIT + file LICENSE
+Imports: 
+    config (>= 0.3),
+    golem (>= 0.3.2),
+    shiny (>= 1.6.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
