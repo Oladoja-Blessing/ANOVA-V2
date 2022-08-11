@@ -1,5 +1,8 @@
 ---
 output: github_document
+editor_options: 
+  markdown: 
+    wrap: sentence
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -15,42 +18,37 @@ knitr::opts_chunk$set(
 
 # ANOVA
 
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
+The goal of ANOVA is to help researchers analyse their experimental data easily for variance and also carry out post hoc test without learning much code.
+The interface is easy to use and straightforward.
 
-The goal of ANOVA is to ...
+## Access
 
-## Installation
+You can access the app from [ANOVA](https://blessing-oladoja.shinyapps.io/ANOVA/)
 
-You can install the released version of ANOVA from [CRAN](https://CRAN.R-project.org) with:
+## Analysis of Variance
 
-``` r
-install.packages("ANOVA")
-```
+Using the App, it is possible to carry analysis of variance for;
 
-## Example
+-   Completely randomized design.
 
-This is a basic example which shows you how to solve a common problem:
+-   Randomised complete block design.
 
-```{r example}
-library(ANOVA)
-## basic example code
-```
+-   Latin square design.
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+## Post Hoc Analysis
 
-```{r cars}
-summary(cars)
-```
+The available post hoc analysis are;
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+-   Least significant difference test.
 
-You can also embed plots, for example:
+-   Tukey's Honestly significant difference test.
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+-   Duncan multiple range test.
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+## Tables and Plots
+
+It is also possible to download the results of the analysis as csv and jpeg files.
+
+## Procedures
+
+To use the app, the user have to import their data which is already in a tidy format (long format) and select the appropriate columns, then click on `apply changes`
