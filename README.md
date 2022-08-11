@@ -10,7 +10,7 @@ much code. The interface is easy to use and straightforward.
 ## Access
 
 You can access the app from
-[ANOVA](https://blessing-oladoja.shinyapps.io/ANOVA/)
+[ANOVA](https://oladoja-blessing.shinyapps.io/ANOVA/)
 
 ## Analysis of Variance
 
