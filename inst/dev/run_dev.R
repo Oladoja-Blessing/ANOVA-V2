@@ -16,3 +16,4 @@ golem::document_and_reload()
 
 # Run the application
 ANOVA::run_app()
+

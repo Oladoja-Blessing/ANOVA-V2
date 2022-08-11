@@ -10,6 +10,7 @@
 mod_one_way_module_ui <- function(id){
   ns <- NS(id)
   tagList(
+    tabItem( tabName = "one",
     sidebarLayout(
       sidebarPanel(
         fileInput(ns("csv_input"),"Choose input file",
@@ -29,34 +30,24 @@ mod_one_way_module_ui <- function(id){
       ######################################################
       mainPanel(
         tabsetPanel(
-          id = ns("wizard"),
-          type = "hidden",
-          tabPanel(value = "pg1", DT::dataTableOutput(ns("one_data")),
-                                               actionButton(ns("pg_12"),
-                                                            "Go to analysis page"),
-                                               actionButton(ns("pg_13"),
-                                                            "Go to Visualization page")
+          type = "tab",
+          tabPanel("Data",DT::dataTableOutput(ns("one_data"))
 
           ),
-          tabPanel(value = "pg2",
-                   verbatimTextOutput(ns("aov_one")),
+          tabPanel("Analysis of Variance",verbatimTextOutput(ns("aov_one")),
                    downloadButton(ns("downloadaov_one"),
-                                  "Download result"),
-                   actionButton(ns("pg_21"),"Data table"),
-                   actionButton(ns("pg_23"),"Follow up tests")),
-          tabPanel(value = "pg3",
-                   plotOutput(ns("fut_one")),
+                                  "Download result")),
+          tabPanel("Post hoc analysis",plotOutput(ns("fut_one")),
                    downloadButton(ns("downloadfut_one"),
                                   "Download plot"),
                    tableOutput(ns("fut_table_one")),
                    downloadButton(ns("downloadfut_table_one"),
-                                  "Download table"),
-                   actionButton(ns("pg_31"),"Data table"),
-                   actionButton(ns("pg_32"), "Analysis Page")
+                                  "Download table")
           )
         )
       )
     )
+  )
   )
 }
 
@@ -74,13 +65,6 @@ mod_one_way_module_server <- function(id){
       mydata = NULL
 
     )
-    observeEvent(input$pg_12,switch_page(2))
-    observeEvent(input$pg_13, switch_page(3))
-    observeEvent(input$pg_21, switch_page(1))
-    observeEvent(input$pg_23, switch_page(3))
-    observeEvent(input$pg_31, switch_page(1))
-    observeEvent(input$pg_32, switch_page(2))
-
     observeEvent(input$csv_input, {
 
       #Store loaded data in reactive

@@ -37,7 +37,7 @@ mod_latin_module_ui <- function(id){
                            verbatimTextOutput(ns("aov_three")),
                            downloadButton(ns("downloadaov_three"),
                                           "Download result")),
-                  tabPanel("Follow up Test",
+                  tabPanel("Post hoc analysis",
                            plotOutput(ns("fut_three")),
                            downloadButton(ns("downloadfut_three"),
                                           "Download plot"),

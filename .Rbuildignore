@@ -8,3 +8,7 @@ $run_dev.*
 ^README\.Rmd$
 ^CODE_OF_CONDUCT\.md$
 ^codecov\.yml$
+^doc$
+^Meta$
+^app\.R$
+^rsconnect$

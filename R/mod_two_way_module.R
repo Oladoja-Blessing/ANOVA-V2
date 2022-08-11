@@ -36,7 +36,7 @@ mod_two_way_module_ui <- function(id){
                            verbatimTextOutput(ns("aov_two")),
                            downloadButton(ns("downloadaov_two"),
                                           "Download result")),
-                  tabPanel("Follow up Test",
+                  tabPanel("Post hoc analysis",
                            plotOutput(ns("fut_two")),
                            downloadButton(ns("downloadfut_two"),
                                           "Download plot"),
