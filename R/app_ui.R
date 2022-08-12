@@ -9,6 +9,7 @@ app_ui <- function(request) {
   tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
+    includeCSS("inst/app/www/custom.css"),
     # Your application UI logic
     dashboardPage(
 
